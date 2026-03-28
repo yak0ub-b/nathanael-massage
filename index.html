@@ -252,8 +252,8 @@
     <div style="position:absolute;inset:0;background:linear-gradient(to right,#120D06 0%,rgba(18,13,6,0.55) 40%,transparent 75%);"></div>
     <!-- Fondu bas -->
     <div style="position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top,#120D06,transparent);"></div>
-    <!-- Grille décorative pour la profondeur -->
-    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(201,164,110,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(201,164,110,0.02) 1px,transparent 1px);background-size:60px 60px;"></div>
+    <!-- Vignette de profondeur (bords sombres = volume) -->
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 65% 45%,transparent 30%,rgba(18,13,6,0.55) 100%);"></div>
   </div>
 
   <!-- Layer 2 — foreground content (normal scroll) -->
@@ -437,8 +437,8 @@
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 100% at 50% 0%,rgba(201,164,110,0.07) 0%,transparent 60%);z-index:0;"></div>
   <!-- Horizontal light streak -->
   <div style="position:absolute;top:50%;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(201,164,110,0.2),transparent);transform:translateY(-50%);z-index:0;"></div>
-  <!-- Depth grid -->
-  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(201,164,110,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,164,110,0.03) 1px,transparent 1px);background-size:80px 80px;transform:perspective(800px) rotateX(60deg) translateY(-20%);transform-origin:top;z-index:0;"></div>
+  <!-- Vignette profondeur (bords sombres) -->
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,transparent 20%,rgba(14,10,4,0.6) 100%);z-index:1;"></div>
 
   <div style="position:relative;z-index:1;max-width:1280px;margin:0 auto;text-align:center;">
     <p class="section-label reveal" style="margin-bottom:20px;">L'expérience</p>
@@ -708,14 +708,14 @@
 ══════════════════════════════════════════════ -->
 <section style="position:relative;padding:160px 40px;overflow:hidden;">
 
-  <!-- Multi-layer depth background -->
-  <div style="position:absolute;inset:0;background:#0E0A04;z-index:0;"></div>
-  <!-- Perspective grid floor -->
-  <div style="position:absolute;bottom:0;left:0;right:0;height:60%;background-image:linear-gradient(rgba(201,164,110,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(201,164,110,0.06) 1px,transparent 1px);background-size:80px 80px;transform:perspective(600px) rotateX(55deg);transform-origin:bottom;z-index:0;"></div>
-  <!-- Top fade -->
-  <div style="position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(to bottom,#0E0A04,transparent);z-index:1;"></div>
-  <!-- Radial gold glow center -->
-  <div style="position:absolute;top:30%;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(201,164,110,0.08) 0%,transparent 70%);z-index:1;pointer-events:none;"></div>
+  <!-- Photo de fond -->
+  <img src="image copy.png" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:brightness(0.22) saturate(0.5);z-index:0;" />
+  <!-- Overlay sombre profond -->
+  <div style="position:absolute;inset:0;background:rgba(14,10,4,0.55);z-index:1;"></div>
+  <!-- Vignette bords sombres pour volume -->
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 65% 70% at 50% 50%,transparent 20%,rgba(8,6,2,0.75) 100%);z-index:1;"></div>
+  <!-- Lueur dorée centrale subtile -->
+  <div style="position:absolute;top:30%;left:50%;transform:translateX(-50%);width:900px;height:500px;background:radial-gradient(ellipse,rgba(201,164,110,0.07) 0%,transparent 70%);z-index:1;pointer-events:none;"></div>
 
   <div style="position:relative;z-index:2;max-width:1280px;margin:0 auto;text-align:center;">
 
