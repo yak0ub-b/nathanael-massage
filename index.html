@@ -195,8 +195,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
-      filter: contrast(1.08) brightness(0.85) saturate(0.55) sepia(0.15);
+      object-position: center center;
+      filter: contrast(1.05) brightness(0.72) saturate(0.75);
     }
     @keyframes gold-pulse {
       0%, 100% { box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,164,110,0.15); }
@@ -245,7 +245,7 @@
   <!-- Layer 1 — mid-ground image frame (moves medium) -->
   <div class="parallax-bg" data-speed="0.18" style="position:absolute;top:0;right:0;bottom:0;width:55%;z-index:1;overflow:hidden;">
     <!-- Photo réelle de Nathanael avec traitement premium -->
-    <img src="nath1.png" alt="Nathanael Fresy — masseur à domicile" class="nathanael-photo" style="position:absolute;inset:0;" />
+    <img src="image.png" alt="Cabinet de massage Nathanael Fresy" class="nathanael-photo" style="position:absolute;inset:0;" />
     <!-- Overlay chaud pour le look premium -->
     <div style="position:absolute;inset:0;background:rgba(12,6,1,0.2);mix-blend-mode:multiply;"></div>
     <!-- Fondu gauche pour se fondre dans le contenu -->
@@ -430,13 +430,15 @@
 ══════════════════════════════════════════════ -->
 <div style="position:relative;padding:100px 40px;overflow:hidden;">
 
-  <!-- Deep background layers -->
-  <div style="position:absolute;inset:0;background:#0E0A04;"></div>
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 100% at 50% 0%,rgba(201,164,110,0.06) 0%,transparent 60%);"></div>
+  <!-- Background photo du bâtiment -->
+  <img src="image copy 2.png" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:brightness(0.28) saturate(0.5);z-index:0;" />
+  <!-- Overlay sombre premium -->
+  <div style="position:absolute;inset:0;background:rgba(14,10,4,0.6);z-index:0;"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 100% at 50% 0%,rgba(201,164,110,0.07) 0%,transparent 60%);z-index:0;"></div>
   <!-- Horizontal light streak -->
-  <div style="position:absolute;top:50%;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(201,164,110,0.15),transparent);transform:translateY(-50%);"></div>
-  <!-- Simulated depth grid -->
-  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(201,164,110,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,164,110,0.03) 1px,transparent 1px);background-size:80px 80px;transform:perspective(800px) rotateX(60deg) translateY(-20%);transform-origin:top;"></div>
+  <div style="position:absolute;top:50%;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(201,164,110,0.2),transparent);transform:translateY(-50%);z-index:0;"></div>
+  <!-- Depth grid -->
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(201,164,110,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,164,110,0.03) 1px,transparent 1px);background-size:80px 80px;transform:perspective(800px) rotateX(60deg) translateY(-20%);transform-origin:top;z-index:0;"></div>
 
   <div style="position:relative;z-index:1;max-width:1280px;margin:0 auto;text-align:center;">
     <p class="section-label reveal" style="margin-bottom:20px;">L'expérience</p>
@@ -544,7 +546,7 @@
     <div class="reveal tilt" style="position:relative;">
       <div class="photo-frame-pulse" style="position:relative;height:520px;border-radius:12px;overflow:hidden;border:1px solid rgba(201,164,110,0.22);">
         <!-- Photo réelle de Nathanael -->
-        <img src="nath1.png" alt="Nathanael Fresy — masseur à domicile" class="nathanael-photo" />
+        <img src="image copy.png" alt="Cabinet de massage Nathanael Fresy" class="nathanael-photo" />
         <!-- Gradient bas pour lisibilité du label -->
         <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(18,13,6,0.08) 0%,rgba(18,13,6,0.55) 100%);"></div>
         <!-- Décoration coins dorés -->
@@ -552,7 +554,7 @@
         <div style="position:absolute;bottom:16px;right:16px;width:30px;height:30px;border-bottom:1px solid rgba(201,164,110,0.5);border-right:1px solid rgba(201,164,110,0.5);border-radius:0 0 2px 0;"></div>
         <!-- Label overlay -->
         <div class="glass" style="position:absolute;bottom:24px;left:24px;right:24px;padding:16px 20px;border-radius:10px;">
-          <p class="section-label" style="margin-bottom:4px;">Votre masseur</p>
+          <p class="section-label" style="margin-bottom:4px;">Le cabinet</p>
           <p style="color:#F5EFE6;font-family:'Cormorant Garamond',serif;font-size:1.125rem;font-weight:300;">Nathanael Fresy</p>
         </div>
       </div>
